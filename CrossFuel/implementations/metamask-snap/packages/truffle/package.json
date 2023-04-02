@@ -1,0 +1,30 @@
+{
+  "name": "truffle",
+  "version": "0.1.0",
+  "private": true,
+  "license": "(MIT-0 OR Apache-2.0)",
+  "scripts": {
+    "build": "truffle compile",
+    "deploy": "truffle compile && node ./scripts/deploy-all-contracts.js",
+    "deploy-scroll": "node ./scripts/scroll-deploy.js",
+    "node": "node scripts/ganache.js",
+    "test": "truffle test",
+    "test-with-ganache-forked-chain": "WITH_FORKED_GANACHE_FORKED_CHAIN=true truffle test"
+  },
+  "dependencies": {
+    "@1inch/fusion-sdk": "^0.0.11",
+    "@account-abstraction/contracts": "0.5.0",
+    "@axelar-network/axelar-gmp-sdk-solidity": "^3.2.1",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@truffle/hdwallet-provider": "^2.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ganache": "^7.5.0",
+    "truffle": "^5.7.8",
+    "truffle-plugin-verify": "^0.6.1",
+    "ts-node": "^10.9.1",
+    "typescipt": "^1.0.0"
+  }
+}
