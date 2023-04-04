@@ -11,12 +11,12 @@ async function main() {
   const productAddress = await contract.getAddress(0);
   console.log(productAddress);
 
-  const product_0 = await ethers.getContract(
+  const product_0 = await ethers.getContractAt(
     "Product",
     "0xa16e02e87b7454126e5e10d957a927a7f5b5d2be"
   );
   console.log(product_0);
-  const data = product_0.i_data;
+  const data = await product_0.getData();
   console.log(data);
 }
 
